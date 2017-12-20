@@ -29,5 +29,4 @@ class QiubaispiderSpider(scrapy.Spider):
             item['supportNum'] = div.xpath('div[@class="stats"]/span[@class="stats-vote"]/i/text()').extract()[0]
             item['commentNum'] = div.xpath('div[@class="stats"]/span[@class="stats-comments"]/a/i/text()').extract()[0]
             items.append(item)
-            print('item is', item)
         return items
